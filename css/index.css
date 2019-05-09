@@ -67,7 +67,7 @@ body > header {
 body > header:hover{
     background-color: #222222;
 }
-.personal-info, .skills {
+.personal-info, .skills, .languages {
     /* border: solid #777 1px; */
     background-color: #777;
     border-radius: 5px;
@@ -77,6 +77,9 @@ body > header:hover{
 .skills {
     background-color: #aaa;
 }
+.languages {
+    background-color: #bbb;
+}
 .skills > article > ul > li{ 
     transition: .5s;
     font-weight: 400;
@@ -84,7 +87,7 @@ body > header:hover{
 .skills > article > ul > li:hover{ 
     font-weight: 600;
 }
-.skills > header {
+.skills > header,.languages > header {
     padding: 10px;
 }
 .personal-info > header{
