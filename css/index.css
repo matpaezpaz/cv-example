@@ -67,12 +67,26 @@ body > header {
 body > header:hover{
     background-color: #222222;
 }
-.personal-info {
+.personal-info, .skills {
     /* border: solid #777 1px; */
     background-color: #777;
     border-radius: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
-
+.skills {
+    background-color: #aaa;
+}
+.skills > article > ul > li{ 
+    transition: .5s;
+    font-weight: 400;
+}
+.skills > article > ul > li:hover{ 
+    font-weight: 600;
+}
+.skills > header {
+    padding: 10px;
+}
 .personal-info > header{
     padding-top: 10px;
     padding-bottom: 10px;
