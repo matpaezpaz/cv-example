@@ -1,0 +1,167 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+$primary-grey: #777;
+$personal-info-transition: .3s;
+
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+@mixin colwidth($percentage){
+    -ms-flex: 0 0 $percentage;
+    flex: 0 0 $percentage;
+    max-width: $percentage;
+}
+.col-1,.col-2,.col-3,.col-4{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-1{
+    @include colwidth(25%);
+}
+.col-2{
+    @include colwidth(50%);
+}
+.col-3{
+    @include colwidth(75%);
+}
+.col-4{
+    @include colwidth(100%);
+}
+body {
+    &>article{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+    }
+    &>header {
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        background-color: #111111;
+        color: white;
+        transition: 0.2s;
+    }
+    &>header:hover{
+        background-color: #222222;
+    }
+}
+.no-margin {
+    margin: 0px;
+}
+.italic{
+    font-style: italic;
+}
+#user_picture {
+    max-width: 100%;
+    border-radius: 999px;
+}
+.personal-info, .skills, .languages {
+    /* border: solid #777 1px; */
+    background-color: $primary-grey;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.skills {
+    background-color: #aaa;
+}
+.languages {
+    background-color: #bbb;
+}
+.skills{ 
+    header{
+        padding: 10px;
+    }
+    &__article {
+        ul {
+            li {
+                transition: .5s;
+                font-weight: 400;
+            }
+            li:hover{
+                font-weight: 600;
+            }
+        }
+    }
+}
+.languages {
+    header {
+        padding: 10px;
+    }
+}
+
+.personal-info:hover {    
+    header{
+        color: white;
+        border-bottom: solid white 2px;
+    }
+}
+.personal-info {
+    header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid black 2px;
+        position: relative;
+        transition: $personal-info-transition;
+        text-align: center;
+        h1,h3{
+            margin: 0px;
+        }
+    }
+    article {
+        overflow: hidden;
+    }
+}
+.profile-picture{
+    margin: 20px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    img.image-over {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transition: $personal-info-transition;
+    }
+}
+.personal-info:hover  {
+    img.image-over {
+        opacity: 0;
+    }
+}
+.about-me,.previous-jobs,.courses{
+    padding-bottom: 10px;
+}
+li {
+    h4 {
+        margin: 0px;
+    }
+    span {
+        font-style: italic;
+    }
+}
+article {
+    ul {
+        list-style: none;
+        li {
+            padding-bottom: 10px;
+        }
+    }
+}

@@ -1,145 +1,168 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 .row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
 }
-.col-1,.col-2,.col-3,.col-4{
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+
+.col-1, .col-2, .col-3, .col-4 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
-.col-1{
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+
+.col-1 {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
 }
-.col-2{
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
+
+.col-2 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
 }
-.col-3{
-    -ms-flex: 0 0 75%;
-    flex: 0 0 75%;
-    max-width: 75%;
+
+.col-3 {
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
 }
-.col-4{
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
+
+.col-4 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
+
 body > article {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-}
-.no-margin {
-    margin: 0px;
-}
-.italic{
-    font-style: italic;
-}
-#user_picture {
-    max-width: 100%;
-    border-radius: 999px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
 }
 body > header {
-    text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    background-color: #111111;
-    color: white;
-    transition: 0.2s;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #111111;
+  color: white;
+  transition: 0.2s;
 }
-body > header:hover{
-    background-color: #222222;
+body > header:hover {
+  background-color: #222222;
 }
+
+.no-margin {
+  margin: 0px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#user_picture {
+  max-width: 100%;
+  border-radius: 999px;
+}
+
 .personal-info, .skills, .languages {
-    /* border: solid #777 1px; */
-    background-color: #777;
-    border-radius: 5px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+  /* border: solid #777 1px; */
+  background-color: #777;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
+
 .skills {
-    background-color: #aaa;
+  background-color: #aaa;
 }
+
 .languages {
-    background-color: #bbb;
+  background-color: #bbb;
 }
-.skills > article > ul > li{ 
-    transition: .5s;
-    font-weight: 400;
+
+.skills header {
+  padding: 10px;
 }
-.skills > article > ul > li:hover{ 
-    font-weight: 600;
+.skills__article ul li {
+  transition: 0.5s;
+  font-weight: 400;
 }
-.skills > header,.languages > header {
-    padding: 10px;
+.skills__article ul li:hover {
+  font-weight: 600;
 }
-.personal-info > header{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: solid black 2px;
-    position: relative;
-    transition: .3s;
-    text-align: center;
+
+.languages header {
+  padding: 10px;
 }
-.personal-info:hover > header{
-    border-bottom: solid white 2px;
+
+.personal-info:hover header {
+  color: white;
+  border-bottom: solid white 2px;
 }
-.personal-info > header > h1,.personal-info > header > h3 {
-    margin: 0px;
+
+.personal-info header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid black 2px;
+  position: relative;
+  transition: 0.3s;
+  text-align: center;
 }
-.personal-info:hover > header{
-    color: white;
+.personal-info header h1, .personal-info header h3 {
+  margin: 0px;
 }
-.personal-info > article {
-    overflow: hidden;
+.personal-info article {
+  overflow: hidden;
 }
-.profile-picture{
-    margin: 20px;
-    position: relative;
-    top: 0px;
-    left: 0px;
+
+.profile-picture {
+  margin: 20px;
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
-.profile-picture > img.image-over {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    transition: 0.3s;
+.profile-picture img.image-over {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
 }
+
 .personal-info:hover img.image-over {
-    opacity: 0;
+  opacity: 0;
 }
-.about-me,.previous-jobs,.courses{
-    padding-bottom: 10px;
+
+.about-me, .previous-jobs, .courses {
+  padding-bottom: 10px;
 }
-.about-me > header {
-    
+
+li h4 {
+  margin: 0px;
 }
-li>h4{
-    margin: 0;
+li span {
+  font-style: italic;
 }
-li>span{
-    font-style: italic;
+
+article ul {
+  list-style: none;
 }
-article > ul > li {
-    padding-bottom: 10px;
+article ul li {
+  padding-bottom: 10px;
 }
-article > ul{
-    list-style: none;
-}
+
+/*# sourceMappingURL=index.css.map */
